@@ -27,3 +27,10 @@
  a {
      font-size: smaller;
  }
+
+ .card {
+     background-color: lightyellow;
+     display: inline-box;
+     width: 30%;
+     border: 1px solid black;
+ }
