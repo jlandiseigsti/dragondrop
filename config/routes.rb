@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'cards/index'
   get 'cards/show'
-  get 'cards/new'
+  get 'cards/new' => 'cards#new'
   get 'cards/edit'
   get 'cards/create'
   get 'cards/update'
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'users/destroy'
 
   resources :users do
-  resources :card 
+    resources :cards 
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
