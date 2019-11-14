@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'users/destroy'
   #resources :cards
 
+  resources :cards
+
   resources :users do
     resources :cards 
   end
