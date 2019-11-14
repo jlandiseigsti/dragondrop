@@ -1,6 +1,8 @@
 class CardsController < ApplicationController
   def index
     @cards = Card.all
+    @user_id = params[:user_id]
+    @user = User.find(params[:user_id])
   end
 
   def show
@@ -9,6 +11,8 @@ class CardsController < ApplicationController
 
   def new
     @card = Card.new
+    @user_id = params[:user_id]
+    @user = User.find(params[:user_id])
   end
 
   def edit
@@ -27,7 +31,7 @@ class CardsController < ApplicationController
   end
 
   private
-  def user_params
-    params.require(:card).permit(:tite, :text)
+  def card_params
+    params.require(:card).permit(:title, :text, :user_id)
   end
 end
