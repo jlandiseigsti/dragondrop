@@ -16,7 +16,7 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(card_params)
-    @card.save
+    @card.save 
     redirect_to @card
   end
 
@@ -26,6 +26,8 @@ class CardsController < ApplicationController
   def destroy
   end
 
-  private card_params
-  params.require(:card).permit(:title, :text, :user)
+  private
+  def user_params
+    params.require(:card).permit(:tite, :text)
+  end
 end

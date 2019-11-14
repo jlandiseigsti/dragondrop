@@ -1,4 +1,11 @@
+<h1>Our Dragon Team </h1>
 <% @users.each do | user | %>
-    <span>Dragon Name: </span>
-    <%= user.name.upcase %><br>
+    <div id = user>
+        <span>Dragon Name: </span>
+        <%= user.name.upcase %><br>
+        <%= link_to 'Edit User', users_edit_path %>
+        <%= link_to 'Delete user', users_destroy_path%>
+    </div> <br>
 <% end %>
+<br>
+<%= link_to 'New User', users_new_path%>
