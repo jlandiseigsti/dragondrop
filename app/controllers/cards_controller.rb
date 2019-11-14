@@ -20,8 +20,9 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(card_params)
+    @user = User.find(params[:user_id])
     @card.save 
-    redirect_to @card
+    redirect_to @user
   end
 
   def update
@@ -32,6 +33,6 @@ class CardsController < ApplicationController
 
   private
   def card_params
-    params.require(:card).permit(:title, :text, :user_id)
+    params.require(:card).permit(:title, :text, :category, :urgency, :user_id)
   end
 end
