@@ -27,7 +27,7 @@ class CardsController < ApplicationController
   end
 
   private
-  def user_params
+  def card_params
     params.require(:card).permit(:tite, :text)
   end
 end
