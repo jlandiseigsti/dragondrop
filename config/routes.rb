@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/update'
   get 'users/destroy'
+  #resources :cards
 
   resources :cards
 
