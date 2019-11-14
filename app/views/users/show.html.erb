@@ -2,7 +2,7 @@
 <span>WELCOME! Your dragon name is: </span>
 <%= @user.name.upcase %>
 
-<%= link_to 'My cards', user_cards_path(@user.id) %>
+
 <%= link_to 'New card', new_user_card_path(@user.id) %>
 
 <br>
