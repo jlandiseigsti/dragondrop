@@ -21,7 +21,7 @@
     <%= form.label :urgency %>
     <br>
     <%= select_tag(:urgency, options_for_select([['Mild Fire', 1], ['Medium Fire', 2], ['Hot Fire', 3], ['Diablo', 4]], 1)) %>
-    <input type = "hidden" value = "<%= @user_id %>" name="card[user_id]">
+    <input type = "hidden" value = "<%= @user_id %>" name="card[user_id">
 </div>
 <div>
     <%= form.submit %>

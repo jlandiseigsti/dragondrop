@@ -1,8 +1,15 @@
-<h1>Users</h1>
-<span>WELCOME! Your dragon name is: </span>
+<h1>My tasks</h1>
+<span>Hi! Your dragon name is: </span>
 <%= @user.name.upcase %>
-
-
+<br>
+<% @cards.each do |c| %>
+<div class="card">
+    <p>Id: <%= c.id%></p>
+    <p>Title: <%= c.title%></p>
+    <p>Text: <%= c.text%></p>
+</div>
+<% end %>
+<br>
 <%= link_to 'New card', new_user_card_path(@user.id) %>
 
 <br>

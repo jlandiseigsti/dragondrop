@@ -2,7 +2,9 @@
 <% @users.each do | user | %>
     <div id = user>
         <span>Dragon Name: </span>
-        <%= user.name.upcase %><br>
+        <% name = user.name.upcase %>
+        <% path = (user.id)%>
+        <%= link_to name, user_path(user.id) %>
         <%= link_to 'Edit User', users_edit_path %>
         <%= link_to 'Delete user', users_destroy_path%>
     </div> <br>

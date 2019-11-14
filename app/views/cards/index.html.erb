@@ -1,7 +1,8 @@
-<h1>Cards#index</h1>
-<p>Find me in app/views/cards/index.html.erb</p>
-<p> The current user 1 is: </p>
-<%= @user_id%>
-<p>Hello, </p>
-<%= @user.name %>
+<h1><%= @user.name %></h1>
+
 <%= link_to 'My cards', new_user_card_path%>
+
+<% @cards.each do |c| %>
+<p>hi</p>
+<p>Id: <% c.id%></P>
+<% end %>
