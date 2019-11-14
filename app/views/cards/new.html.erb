@@ -1,3 +1,4 @@
+
 <h1>Make a new note card</h1>
 
 <%= form_with scope: :card, url: '/users/:user_id/card', local: true do | form | %>
@@ -25,3 +26,5 @@
     <%= form.submit %>
 </div>
 <%end%>
+<%= link_to 'My cards', cards_index_path%>
+<%= link_to 'View All Users', users_index_path%>
