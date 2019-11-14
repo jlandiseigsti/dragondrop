@@ -1,2 +1,19 @@
-<h1>Users#new</h1>
+<h1>Become a Dragon</h1>
 <p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_with scope: :user, url: users_path, local: true do | form | %>
+<div>
+    <%= form.label :name %>
+    <br>
+    <%= form.text_field :name %>
+</div>
+<div>
+    <%= form.label :password %>
+    <br>
+    <%= form.text_field :password %>
+</div>
+<div>
+    <%= form.submit %>
+</div>
+<%end%>
+    
