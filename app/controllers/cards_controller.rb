@@ -16,6 +16,7 @@ class CardsController < ApplicationController
   end
 
   def edit
+    @card = Card.find(params[:id])
   end
 
   def create
@@ -26,7 +27,13 @@ class CardsController < ApplicationController
   end
 
   def update
-
+    @card = Card.find(params[:id])
+    @user = User.find(params[:user_id])
+    if @card.update(card_params)
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
   def destroy

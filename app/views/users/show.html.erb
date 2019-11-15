@@ -5,7 +5,7 @@
 <div class="card">
     <p>Title: <%= c.title%></p>
     <p>Text: <%= c.text%></p>
-    <%= link_to 'Edit card', edit_user_card_path(c.id)%>
+    <%= link_to 'Edit card', edit_user_card_path(@user.id, c.id)%>
     <%= link_to 'Delete card', user_card_path(@user.id, c.id), method: :delete, data: { confirm: "Are you sure?" }%>
 </div>
 <% end %>

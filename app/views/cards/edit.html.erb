@@ -1,2 +1,30 @@
-<h1>Cards#edit</h1>
-<p>Find me in app/views/cards/edit.html.erb</p>
+<h1>Edit my cards </h1>
+
+<%= form_with model: @card, url: user_card_path, local: true do | form | %>
+<div>
+    <%= form.label :title %>
+    <br>
+    <%= form.text_field :title, value: @card.title%>
+</div>
+<div>
+    <%= form.label :text %>
+    <br>
+    <%= form.text_area :text, value: @card.text %>
+</div>
+<div>
+    <%= form.label :category %>
+    <br>
+    <%= form.text_field :category, value: @card.category %>
+</div>
+<div>
+    <%= form.label :urgency %>
+    <br>
+    <%= select_tag(:urgency, options_for_select([['Mild Fire', 1], ['Medium Fire', 2], ['Hot Fire', 3], ['Diablo', 4]], 1)) %>
+    <input type = "hidden" value = "<%= @user_id %>" name="cards[user_id]">
+</div>
+<div>
+    <%= form.submit %>
+</div>
+<%end%>
+<%= link_to 'My cards', new_user_card_path%>
+<%= link_to 'View All Users', users_index_path%>
