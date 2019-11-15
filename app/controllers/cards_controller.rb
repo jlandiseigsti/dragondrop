@@ -26,9 +26,14 @@ class CardsController < ApplicationController
   end
 
   def update
+
   end
 
   def destroy
+    @card = Card.find(params[:id])
+    @card.destroy
+    @user = User.find(params[:user_id])
+    redirect_to @user
   end
 
   private

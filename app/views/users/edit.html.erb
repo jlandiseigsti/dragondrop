@@ -1,2 +1,13 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div id=container>
+<h1>Change username</h1>
+<%# <p>Find me in app/views/users/edit.html.erb</p> %>
+
+<%= form_with(model: @user, url: user_path(@user.id), local: true) do |f|%>
+<p>
+
+<%= f.label :name %>
+<%= f.text_field :name, value: @user.name%>
+</p>
+<%= f.submit %>
+<% end %>
+</div>
