@@ -17,7 +17,9 @@
  body {
     background-color: #DDDDDD;
     width: 80%;
-    margin: auto;
+    margin: 1em;
+    color: #224422;
+    text-align: center;
  }
 
  div {
@@ -28,9 +30,25 @@
      font-size: smaller;
  }
 
+ h1{
+    text-align: center;
+ }
+
+
  .card {
      background-color: lightyellow;
      display: inline-box;
      width: 30%;
      border: 1px solid black;
+     padding: 1em;
+     text-align: left;
+ }
+
+ .dragon_name{
+     font-size: 1.4em;
+     font-style: italic;
+ }
+
+ .dragon_name a{
+     color: darkgreen;
  }
