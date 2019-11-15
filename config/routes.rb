@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'users/update'
   get 'users/destroy'
   #resources :cards
-
+  root 'users#index'
   resources :cards
 
   resources :users do

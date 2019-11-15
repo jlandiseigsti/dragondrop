@@ -1,8 +1,7 @@
 <h1>Our Dragon Team </h1>
 <div>
     <% @users.each do | user | %>
-        <div id = user>
-            <span>Dragon Name: </span>
+        <div class = user>
             <% name = user.name.upcase %>
             <% path = (user.id)%>
             <span class = "dragon_name"><%= link_to name, user_path(user.id) %></span> <br>

@@ -15,11 +15,14 @@
  */
 
  body {
-    background-color: #DDDDDD;
+
     width: 80%;
-    margin: 1em;
+    margin: 1em auto;
     color: #224422;
     text-align: center;
+    background-image: url(/assets/trogdor.png);
+    background-repeat: no-repeat;
+    background-color: #DDDDDD;
  }
 
  div {
@@ -42,8 +45,16 @@
      border: 1px solid black;
      padding: 1em;
      text-align: left;
+     box-shadow: 5px 5px 1px black;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
-
+.user{
+    width: 30%;
+    border: 1px solid black;
+    padding: 1em;
+    background-color: #9e9;
+    display: inline-block;
+}
  .dragon_name{
      font-size: 1.4em;
      font-style: italic;
