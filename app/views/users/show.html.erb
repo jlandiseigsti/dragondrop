@@ -1,10 +1,8 @@
-<h1>My tasks</h1>
-<span>Hi! Your dragon name is: </span>
-<%= @user.name.upcase %>
+<h1><%=@user.name%>'s cards</h1>
+
 <br>
 <% @cards.each do |c| %>
 <div class="card">
-    <p>Id: <%= c.id%></p>
     <p>Title: <%= c.title%></p>
     <p>Text: <%= c.text%></p>
     <%= link_to 'Edit card', edit_user_card_path(c.id)%>

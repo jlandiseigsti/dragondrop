@@ -5,8 +5,8 @@
         <% name = user.name.upcase %>
         <% path = (user.id)%>
         <%= link_to name, user_path(user.id) %>
-        <%= link_to 'Edit User', users_edit_path %>
-        <%= link_to 'Delete user', users_destroy_path%>
+        <%= link_to 'Edit User', edit_user_path(user.id) %>
+        <%= link_to 'Delete user', user_path(user.id), method: :delete, data: { confirm: "Are you sure?" }%>
     </div> <br>
 <% end %>
 <br>
